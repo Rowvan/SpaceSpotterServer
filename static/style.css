@@ -1,0 +1,213 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #12111F;
+    box-sizing: border-box;
+    position: fixed;
+    height: 80px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: #97D500;
+
+    animation: normal;
+    animation-duration: 0.2s;
+}
+.map_pic {
+    /*width: 100%;
+    height: 100%;
+    object-fit: cover; */
+    width: 100%; /* Set width to full viewport width */
+    height: 780px; /* Set height to full viewport height */
+    /* background: rgba(56, 30, 30, 0.5); Semi-transparent overlay color */
+    color: white;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #97D500;
+}
+
+.beauty_pic {
+    /*width: 100%;
+    height: 100%;
+    object-fit: cover; */
+    width: 100%; /* Set width to full viewport width */
+    height: 780px; /* Set height to full viewport height */
+    /* background: rgba(56, 30, 30, 0.5); Semi-transparent overlay color */
+    color: white;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #97D500;
+}
+
+.content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-intro {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background-color: #12111F;
+    opacity: 0.8;
+}
+
+.about-me {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.about-me h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+.service {
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+
+    transition: normal;
+    transition-duration: 0.3s;
+}
+
+.service h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.about-ss {
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-ss:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+
+    transition: normal;
+    transition-duration: 0.3s;
+}
+
+.other-grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+.type-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.try_button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #97D500;
+    border: none;
+    border-radius: 7px;
+}
+
+.try_button:hover {
+    background-color: #80B000;
+    color: white;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+    transition: normal;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.mega-demo-button {
+    padding: 10px 20px;
+    
+    font-size: 24pt;
+    color: white;
+    background-color: #97D500;
+    border: none;
+    padding: 20px;
+    border-radius: 7px;
+    margin: 20px;
+}
+
+.mega-demo-button:hover {
+    background-color: #80B000;
+    color: white;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+    transition: normal;
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+}
+
+.footer {
+    background-color: #12111F;
+    height: 60px;
+    width: 100%;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= stylesheet href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Space Spotter | Home</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">
+        <img src="{{ url_for('static', filename='images/space-spotter-logo.jpg') }}" width="110px" height="80px" alt="logo">
+        </a>
+        <div style="vertical-align: middle;">
+            <span style="font-size: 22pt;">Space Spotter</span>
+            <div style="width: 20px; height: 5px;"></div>
+            <span style="font-size: 12pt; margin-left: 20px;">Try to spot one better.</span>
+        </div>
+        <div>
+            <a href="/login">Login</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="beauty_pic">
+        <img src="{{ url_for('static', filename='images/space_spotter_beautified.jpeg') }}" alt="map" height="780px" width="100%">
+        
+    </div>
+
+    <div class="intro">
+        <h1 style="justify-content: center; display: flex; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">How Space Spotter Works</h1>
+        <div class="services">
+            <div class="service">
+            
+                <p>Space Spotter is a cutting-edge parking management app designed to streamline your parking experience.</p>
+            </div>
+            <div class="service">
+
+                <p> With real-time tracking of parking lot availability, you'll always know where to find an open spot</p>
+            </div>
+            <div class="service">
+
+                <p>Say goodbye to endless circling and hello to hassle-free parking. </p>
+            </div>
+        </div>
+    
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <a href="/demo"><button class="mega-demo-button">Check Out The Demos</button></a>
+    </div>
+</div>
+
+</body>
+<div class="footer"></div>
+</html>

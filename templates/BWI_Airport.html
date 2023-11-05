@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+  setInterval(function() {
+      location.reload();
+  }, 5000);
+</script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Spotter | Airport Demo</title>
+  <link rel= stylesheet href="{{ url_for('static', filename='grid.css') }}">
+  <link rel= stylesheet href="{{ url_for('static', filename='style.css') }}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    
+    <div class="navbar">
+      <a href="/">
+      <img src="{{ url_for('static', filename='images/space-spotter-logo.jpg') }}" width="110px" height="80px" alt="logo">
+      </a>
+      <div style="vertical-align: middle;">
+          <span style="font-size: 22pt;">Space Spotter</span>
+          <div style="width: 20px; height: 5px;"></div>
+          <span style="font-size: 12pt; margin-left: 20px;">Try to spot one better.</span>
+      </div>
+      <div>
+          <a href="/login">Login</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+      </div>
+    </div>
+
+
+      <h1 style="display: flex; justify-content: center;">IBM Airport Parking Lot</h1>
+
+
+      {% set lots = institution.lots %}
+      {% for z in range(lots | length) %}
+          <p style="font-size: 24pt; justify-content: center; display: flex;">Lot #{{ z + 1 }}</p>
+          <div class="grid-container">
+              {% set spaces = database.get_lot(lots[z]).spaces %}
+              {% for x in range(spaces | length) %}
+                  {% set space = database.get_space(spaces[x]) %}
+                  {% set status = space.status | int %}
+                  {% if (status | int) == (1 | int) %}
+                      <div id="vacant">
+                          {{ x + 1 }}
+                      </div>
+                  {% elif (status | int) == (0 | int) %}
+                      <div id="occupied">
+                          {{ x + 1 }}
+                      </div>
+                  {% else %}
+                      <div id="problem">
+                          {{ x + 1 }}
+                      </div>
+                  {% endif %}
+              {% endfor %}    
+          </div>
+          <br>
+          <br>
+      {% endfor %}
+
+      <div class="footer"></div>
+
+</body>
+</html>

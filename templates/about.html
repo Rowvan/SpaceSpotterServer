@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Spotter | About</title>
+    <link rel= stylesheet href="{{ url_for('static', filename='grid.css') }}">
+    <link rel= stylesheet href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    
+  <div class="navbar">
+    <a href="/">
+    <img src="{{ url_for('static', filename='images/space-spotter-logo.jpg') }}" width="110px" height="80px" alt="logo">
+    </a>
+    <div style="vertical-align: middle;">
+        <span style="font-size: 22pt;">Space Spotter</span>
+        <div style="width: 20px; height: 5px;"></div>
+        <span style="font-size: 12pt; margin-left: 20px;">Try to spot one better.</span>
+    </div>
+    <div>
+        <a href="/login">Login</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </div>
+  </div>
+
+    <div class="map_pic">
+        <img src="{{ url_for('static', filename='images/map.png') }}" alt="map" height="780px" width="100%">
+        <div class="banner-intro">
+            <h1 style="font-size: 36pt; text-shadow: 0px 0px 5px black;">Welcome to Space Spotter</h1>
+            <p style="font-size: 16pt; text-shadow: 0px 0px 5px black;">Discover the beauty of parking space made easy</p>
+        </div>
+    </div>
+
+    <div class="intro">
+        <h1 style="justify-content: center; display: flex; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Who are we?</h1>
+        <div class="services">
+            <div class="about-ss">
+            
+                <p>Space Spotter was formed on November 3rd, 2023 at the YCP Hackathon. In the far corner, where the teamless hackers went met four individuals.
+                    A radical new idea formed and the four decided to create a team. The team originally had the idea to create a system to dynamically manage 
+                    parking spaces and allow users to quickly find spaces for them to use. The team was able to create a cloud backend in two days and collectively
+                    create what they set out to do and more. Space Spotter is also now a cloud parking organization application too.
+                </p>
+            </div>
+        </div>
+    
+    </div>
+
+
+    <div class="footer"></div>
+
+
+</body>
+</html>

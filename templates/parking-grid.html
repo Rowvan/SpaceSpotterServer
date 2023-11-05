@@ -1,0 +1,46 @@
+<script>
+    setInterval(function() {
+        location.reload();
+    }, 1000); // Reload the page every 1 seconds (1000 milliseconds)
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ institution.nickname }}</title>
+    <link rel= stylesheet href="{{ url_for('static', filename='grid.css') }}">
+</head>
+<body>
+    <h1>{{ institution.nickname }}</h1>
+    <br>
+    <a href="/institutions">Institutions</a>
+    {% set lots = institution.lots %}
+    {% for z in range(lots | length) %}
+        <div class="grid-container">
+            <p>Lot #{{ z + 1 }}</p>
+            {% set spaces = database.get_lot(lots[z]).spaces %}
+            {% for x in range(spaces | length) %}
+                {% set space = database.get_space(spaces[x]) %}
+                {% set status = space.status | int %}
+                {% if (status | int) == (1 | int) %}
+                    <div id="vacant">
+                        {{ x + 1 }}
+                    </div>
+                {% elif (status | int) == (0 | int) %}
+                    <div id="occupied">
+                        {{ x + 1 }}
+                    </div>
+                {% else %}
+                    <div id="problem">
+                        {{ x + 1 }}
+                    </div>
+                {% endif %}
+            {% endfor %}    
+        </div>
+        <br>
+        <br>
+    {% endfor %}
+</body>
+</html>

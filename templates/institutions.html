@@ -1,0 +1,6 @@
+{% for inst in institutions %}
+    <div class="institution">
+        <a href = "/parking_info/{{ inst.nickname }}">{{ inst.nickname }}</a>
+        <p>{{ inst.website }}</p>
+    </div>
+{% endfor %}

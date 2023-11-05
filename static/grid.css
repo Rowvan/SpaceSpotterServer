@@ -1,0 +1,57 @@
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ededed;
+    max-width: 600px;
+    margin: 0 auto;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+#vacant {
+    box-sizing: border-box;
+    width: calc(33.33% - 10px);
+    margin: 10px;
+    padding: 20px;
+    background-color: #3fc672;
+    text-align: center;
+    font-size: 2em;
+    border-radius: 10px;
+}
+
+#occupied {
+box-sizing: border-box;
+width: calc(33.33% - 10px);
+margin: 10px;
+padding: 20px;
+background-color: #d53219;
+text-align: center;
+font-size: 2em;
+border-radius: 10px;
+}
+
+#vacant:hover {
+    background-color: #32ff5f;
+    cursor: pointer;
+    animation: normal;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+    animation-duration: 1s;
+}
+
+#occupied:hover {
+    animation: normal;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+    animation-duration: 1s;
+}
+
+#problem {
+    box-sizing: border-box;
+    width: calc(33.33% - 10px);
+    margin: 10px;
+    padding: 20px;
+    background-color: #504f4f;
+    text-align: center;
+    font-size: 2em;
+    border-radius: 10px;
+    }
