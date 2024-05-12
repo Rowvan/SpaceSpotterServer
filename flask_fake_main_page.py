@@ -81,7 +81,7 @@ inst3 = Institution()
 inst3.id = 2
 inst3.nickname = "GA-Walmart-502"
 inst3.username = "walmartPriv"
-inst3.password = "targetFknSucks"
+inst3.password = "targetSucks"
 
 inst4 = Institution()
 inst4.id = 3
